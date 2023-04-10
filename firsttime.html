@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style> 
+    body{
+margin: 0%;
+padding: 0%;
+overflow: hidden;
+box-sizing: border-box;
+background-color: black;
+align-items: center;
+display: flex;
+justify-content:center; 
+height: 100vh;
+    
+}
+H1 {
+    position: relative;
+    color: black;
+    font-size: 4cm;
+    letter-spacing: 5px;
+    border-bottom: 16px solid #333;
+    line-height: 1.4;
+    font-family: consolas;
+    text-transform: uppercase;
+
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;   
+    color: aqua;
+    border-bottom: 16px solid dodgerblue;
+    animation : lod 2s linear infinite;
+    overflow: hidden ; 
+
+}
+@keyframes lod {
+    0% {
+        width : 0%;
+
+    }
+    100%{
+        width: 100%; 
+    }
+}</style>
+</head>
+<body>
+<h1 data-text ="loading....."> 
+    loading...
+</h1>
+    
+</body>
+</html>
